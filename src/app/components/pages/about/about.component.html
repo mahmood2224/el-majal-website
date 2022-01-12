@@ -1,0 +1,59 @@
+<section class="sliderPages">
+    <div class="header-sliderPage">
+        <h1> {{ 'AboutMajalcom' | translate }}</h1>
+        <p>{{ 'WeWouldBeHappy' | translate }}</p>
+    </div>
+</section>
+<section class="aboutPage" *ngIf="!loadingPage">
+    <!-- <section class="provide-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>{{ 'WeProvideServices' | translate }}</h1>
+                    <p> {{siteInfo.about}} </p>
+                    <a class="btn btn-request" routerLink="/request-quotation">{{ 'RequestForService' | translate }}</a>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 image-about">
+                    <img src="../../../../assets/image/logo.png">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="provide-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 image-about">
+                    <img src="{{siteInfo.imageAbout}}">
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-7">
+                    <h1>{{ 'WeProvideServices' | translate }}</h1>
+                    <p> {{siteInfo.about}} </p>
+                    <a class="btn btn-request" routerLink="/request-quotation">{{ 'RequestForService' | translate }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</section>
+<section *ngIf="!loadingPage" class="values">
+    <div class="container">
+        <div class="header-value">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1> {{ 'OurValues' | translate }}</h1>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6" *ngFor="let item of siteInfo.ourValues">
+                    <div class="our-values">
+                        <img src="{{item.icon}}">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-loading-page *ngIf="loadingPage"></app-loading-page>

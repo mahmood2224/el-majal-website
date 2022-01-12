@@ -1,0 +1,79 @@
+.serv-home{
+    cursor: pointer;
+}
+.loading-page{
+    display: flex;
+    min-height: 500px;
+}
+.loading-page img{
+    margin: auto;
+}
+.img-services{
+    height: 260px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+.loadingHome{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+.loadingHome .loading-page{
+    height: 100%;
+}
+.loading{
+    width: 25%;
+}
+.loading img{
+    width: 25px;
+}
+.btn-request:hover{
+    color: #fff;
+}
+.nav-footer li{
+    cursor: pointer;
+}
+.flagLang .flaghome{
+    width: 20px !important;
+}
+.flaghome{
+    width: 20px !important;
+}
+.whats-app{
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.16);
+    position: fixed;
+    bottom:35px;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 100;
+}
+.whats-app img{
+    width: 50px;
+}
+.navbar-brand{
+    cursor: pointer;
+}
+.maroof-logo{
+    width: 65%;
+}
+.client-img{
+    margin: 0px 10px;
+}
+@media screen and (max-width: 900px){
+    .whats-app img{
+        width: 35px !important;
+    }
+    .maroof-logo{
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+.slick-prev, .slick-next{
+    display: none !important;
+}

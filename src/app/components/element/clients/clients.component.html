@@ -1,0 +1,16 @@
+<section class="client directionRitght">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="header-asked"> {{ 'OurClients' | translate }}</h1>
+            </div>
+        </div>
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigClient" >
+            <div ngxSlickItem  class="slide carouselItem " *ngFor="let item of Client">
+                <div class="client-img">
+                    <img src="{{item.image}}">
+                </div>
+            </div>  
+        </ngx-slick-carousel>
+    </div>
+</section>

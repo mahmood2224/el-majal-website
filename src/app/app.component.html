@@ -1,0 +1,6 @@
+<app-header *ngIf="router.url != '/home'"></app-header>
+<router-outlet></router-outlet>
+<app-download *ngIf="(router.url != '/FAQs' && router.url != '/Contact-us' && router.url != '/request-quotation')"></app-download>
+<a *ngIf="!loading" class="whats-app" href="https://wa.me/{{dataInfo.whatsapp}}" target="_blank">
+    <img src="../assets/image/whatsApp.png">
+</a>

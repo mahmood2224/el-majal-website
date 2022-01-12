@@ -1,0 +1,14 @@
+
+<div *ngIf="!loadingPage">
+    <app-header-home></app-header-home>
+    <app-slider [slider]="slider"></app-slider>
+    <app-workers [cats]="cats"></app-workers>
+    <app-services [Service]="Service"></app-services>
+    <app-provide-home [setting]="setting"></app-provide-home>
+    <app-asked-home [Fqa]="Fqa"></app-asked-home>
+    <app-clients [Client]="Client"></app-clients>
+    <app-customer ></app-customer>
+</div>
+<div class="loadingHome" *ngIf="loadingPage">
+    <app-loading-page ></app-loading-page>
+</div>

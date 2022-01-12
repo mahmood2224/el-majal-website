@@ -1,0 +1,109 @@
+<section class="sliderPages">
+    <div class="header-sliderPage">
+        <h1>{{ 'Getintouch' | translate }}</h1>
+        <p>{{ 'WeWouldBeHappy' | translate }}</p>
+    </div>
+</section>
+<section class="contactPage" *ngIf="!loadingPage">
+    <div class="container">
+        <div class="infoPageContact">
+            <div class="row">
+                <div class="col-md-3 scan">
+                    <div class="scan-img">
+                        <p> {{ 'SCAN' | translate }}<br>{{ 'TOADD' | translate }} </p>
+                        <a target="_blank" href="../../../../assets/image/img/scan.png"><img src="../../../../assets/image/img/scan.png"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ul class="contactSocial">
+                        <li>
+                            <span>
+                                <svg id="Icons_Email" data-name="Icons/Email" xmlns="http://www.w3.org/2000/svg" width="18.667" height="14.934" viewBox="0 0 18.667 14.934">
+                                    <path id="Shape" d="M16.8,14.934H1.867A1.869,1.869,0,0,1,0,13.067V1.867A1.869,1.869,0,0,1,1.867,0H16.8a1.869,1.869,0,0,1,1.867,1.867v11.2A1.869,1.869,0,0,1,16.8,14.934ZM1.867,4.573v1.96l5.927,4.154a2.687,2.687,0,0,0,3.08,0L16.8,6.533V4.573L9.94,9.38a1.062,1.062,0,0,1-1.213,0Z" transform="translate(0 0)" fill="#6c3a79"/>
+                                </svg>                                    
+                            </span>
+                            <div class="info">
+                                <h6> {{ 'EMAILADDRESS' | translate }}</h6>
+                                <p>{{footer.email}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="contactSocial">
+                        <li>
+                            <span>
+                                <svg id="Icons_Email" data-name="Icons/Email" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                    <path id="Path" d="M16.332,21A11.747,11.747,0,0,1,10.8,19.612l-.525-.292a21,21,0,0,1-8.551-8.551l-.292-.525A11.747,11.747,0,0,1,0,4.668V3.887A2.333,2.333,0,0,1,.688,2.23L2.66.259A.875.875,0,0,1,4.036.434l2.625,4.5a1.167,1.167,0,0,1-.187,1.412l-2.2,2.2a.583.583,0,0,0-.1.688l.408.77a15.783,15.783,0,0,0,6.416,6.4l.77.42a.583.583,0,0,0,.688-.1l2.2-2.2a1.167,1.167,0,0,1,1.412-.187l4.5,2.625a.875.875,0,0,1,.175,1.377L18.77,20.312A2.333,2.333,0,0,1,17.113,21Z" transform="translate(3.5 3.5)" fill="#6c3a79"/>
+                                  </svg>                                      
+                            </span>
+                            <div class="info">
+                                <h6> {{ 'MOBILENUMBER' | translate }}</h6>
+                                <p>{{footer.phone}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="contactSocial">
+                        <li>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18.799" height="22" viewBox="0 0 18.799 22">
+                                    <path id="Exclusion_1" data-name="Exclusion 1" d="M9.729,22H8.952a1.174,1.174,0,0,1-1.116-.75l-.6-1.694c-.519-1.58-1.768-2.52-3.09-3.516C2.108,14.506,0,12.918,0,8.8,0,3.948,4.217,0,9.4,0s9.4,3.948,9.4,8.8c0,4.14-2.137,5.728-4.2,7.264-1.332.99-2.59,1.925-3.152,3.493l-.6,1.694A1.172,1.172,0,0,1,9.729,22ZM9.4,2.2A6.844,6.844,0,0,0,2.35,8.8c0,3.117,1.462,4.168,3.313,5.5A10.3,10.3,0,0,1,9.4,18.4a10.386,10.386,0,0,1,3.736-4.1c1.852-1.331,3.314-2.383,3.314-5.5A6.844,6.844,0,0,0,9.4,2.2Zm0,8.8A2.281,2.281,0,0,1,7.05,8.8,2.282,2.282,0,0,1,9.4,6.6a2.281,2.281,0,0,1,2.349,2.2A2.28,2.28,0,0,1,9.4,11Z" transform="translate(0 0)" fill="#6c3a79"/>
+                                  </svg>                                      
+                            </span>
+                            <div class="info">
+                                <h6> {{ 'ADDRESS' | translate }}</h6>
+                                <p>{{footer.address}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703132.5857981844!2d37.203733669435266!3d24.988546230996818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15b9e765d5296a1b%3A0x30521aeebac0f1f0!2sAl%20Madinah%20Province%20Saudi%20Arabia!5e0!3m2!1sen!2slt!4v1638904908567!5m2!1sen!2slt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-md-7">
+                <div class="info-contactPage">
+                    <h1> {{ 'RequestforQuotation' | translate }}</h1>
+                    <form class="row" [formGroup]= "formGroup" (ngSubmit)="submit()">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" {{ 'FullName' | translate }}" name="name" formControlName="name">
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" {{ 'EmailAddress' | translate }}" name="email" formControlName="email">
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" {{ 'MobileNumber' | translate }}" name="phone" formControlName="phone">
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" {{ 'Subject' | translate }}"name="subject" formControlName="subject">
+                              </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="{{ 'Message' | translate }}"name="message" formControlName="message"></textarea>
+                              </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" *ngIf="!loadingbutton" class="btn btn-request"> {{ 'SendRequest' | translate }}</button>
+                            <a class="loading btn btn-request" *ngIf="loadingbutton"> <img src="../../../../assets/image/loading-btn.png" class="fa-spin"></a>
+                        </div>
+                        
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-loading-page *ngIf="loadingPage"></app-loading-page>
+<app-footer></app-footer>

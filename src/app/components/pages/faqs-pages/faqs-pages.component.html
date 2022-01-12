@@ -1,0 +1,31 @@
+<section class="sliderPages">
+    <div class="header-sliderPage">
+        <h1>{{ 'FrequentlyAskedQuestions' | translate }}</h1>
+    </div>
+</section>
+<section class="askedPage">
+    <div class="container">
+      <app-loading-page *ngIf="loadingPage"></app-loading-page>
+        <div class="accordion accordionAsk" id="accordionExample" *ngIf="!loadingPage">
+          <div class="card" *ngFor="let item of FAQs">
+            <div class="card-header" id="heading{{item.id}}">
+              <h2 class="mb-0">
+                <a class="header-accordion" data-toggle="collapse" [attr.data-target]="'#collapse'+ item.id" aria-expanded="true" aria-controls="collapseOne">
+                  {{item.question}} 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585">
+                    <path id="ic_keyboard_arrow_down_24px" d="M8.585,7.84,17,16.237l8.415-8.4L28,10.425l-11,11-11-11Z" transform="translate(-6 -7.84)" fill="#5a5a5a"/>
+                  </svg>
+                  
+                </a>
+              </h2>
+            </div>
+            <div id="collapse{{item.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                {{item.answer}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

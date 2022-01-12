@@ -1,0 +1,39 @@
+<section *ngIf="!loadingPage" class="header-ImagePage">
+    <img src="{{singleServices.icon}}">
+</section>
+<section *ngIf="!loadingPage" class="detailes-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{singleServices.name}}</h1>
+            </div>
+            <div class="col-md-6">
+                <p class="detailes-left">Al Majal Advanced Services Company (Majalcom) is a Saudi company of origin and management based in Jeddah. It was established by a group of specialists with practical experience spanning more than 20 years in the field of support services</p>
+            </div>
+            <div class="col-md-6">
+                <p class="detailes-right"> {{singleServices.desc}} </p> 
+            </div>
+        </div>
+    </div>
+</section>
+<section *ngIf="!loadingPage" class="live-photo">
+    <div class="container">
+        <section class="gallery grid-gallery">
+
+            <figure class="image-6" *ngFor="let item of singleServices.images">
+                <a data-featherlight="image">
+                    <img src="{{item.image}}"/>
+                    <figcaption>Image №6</figcaption>
+                </a>
+            </figure>
+            
+          </section>
+          <div class="row">
+            <div class="col-md-12 seemore">
+                <a class="btn btn-request" routerLink="/request-quotation">{{ 'RequestForService' | translate }}</a>
+            </div>
+          </div>
+    </div>
+</section>
+
+<app-loading-page *ngIf="loadingPage"></app-loading-page>

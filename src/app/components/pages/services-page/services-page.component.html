@@ -1,0 +1,36 @@
+<section class="sliderPages">
+    <div class="header-sliderPage">
+        <h1>{{ 'OurServices' | translate }}</h1>
+        <p>{{ 'WeWouldBeHappy' | translate }}</p>
+    </div>
+</section>
+<section class="servePage">
+    <div class="container">
+        <app-loading-page *ngIf="loadingPage"></app-loading-page>
+        <div *ngIf="!loadingPage" class="row" >
+            <div class="col-md-6" *ngFor="let item of services">
+                <div class="card-servises">
+                    <div class="img-services">
+                        <img (click)="singleUsers(item.id)" src="{{item.icon}}">
+                    </div>
+                    <h1 (click)="singleUsers(item.id)">{{item.name}}</h1>
+                    <p (click)="singleUsers(item.id)">{{item.desc}}</p>
+                    <a routerLink="/request-quotation" class="btn btn-request">{{ 'RequestForService' | translate }}</a>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!loadingPage " class="pagination">
+            <nav *ngIf="num > 1" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled" (click)="moveTo(page-1)">
+                    <a class="page-link"  tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item" *ngFor="let in of Arr(num).fill(1) | slice: 0 : 20 ; let i = index " [ngClass]="{'active': currentPage === i+1}"><a (click)="moveTo(i+1)" class="page-link" >1</a></li>
+                  <li class="page-item">
+                    <a class="page-link" (click)="moveTo(page+1)">Next</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+</section>
